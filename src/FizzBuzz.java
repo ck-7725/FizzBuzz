@@ -5,6 +5,7 @@ class FizzBuzz {
 
     public static void main(String[] args) {
 
+        /*
         for (int i = 1; i < 100; i++) {
 
             // Find out which numbers divide i.
@@ -29,6 +30,29 @@ class FizzBuzz {
                 System.out.println(i);
 
             }
+        }
+        */
+        
+        // Rewrite using while loop:
+        int i = 0;
+        while (i < 100) {
+            doFizzBuzz(i);
+            i++;
+        }
+    }
+
+    private static void doFizzBuzz(int i) {
+        boolean div3 = i % 3 == 0;
+        boolean div5 = i % 5 == 0;
+
+        if (div3 && div5) {
+            System.out.println("Fizz Buzz");
+        } else if (div3) {
+            System.out.println("Fizz");
+        } else if (div5) {
+            System.out.println("Buzz");
+        } else {
+            System.out.println(i);
         }
     }
 }
